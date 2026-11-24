@@ -39,15 +39,31 @@ def urun_ekle():
     print(f"'{ad}' basariyla eklendi.")
 
 
+def kritik_stoklari_listele():
+    veriler = verileri_yukle()
+    kritikler = [u for u in veriler if u["miktar"] <= u["kritik"]]
+
+    if not kritikler:
+        print("Kritik seviyenin altinda urun yok.")
+        return
+
+    print("\n--- Kritik Stok Uyarisi ---")
+    for u in kritikler:
+        print(f"- {u['ad']}: Mevcut {u['miktar']} (Esik: {u['kritik']})")
+
+
 def main():
     while True:
         print("\n--- Stok Takip ---")
         print("1. Yeni urun ekle")
+        print("2. Kritik stoklari listele")
         print("0. Cikis")
         secim = input("Seciminiz: ").strip()
 
         if secim == "1":
             urun_ekle()
+        elif secim == "2":
+            kritik_stoklari_listele()
         elif secim == "0":
             print("Cikiliyor...")
             break
