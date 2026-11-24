@@ -20,3 +20,9 @@ Ekstra bir kütüphane kurmaya gerek yok, Python 3 ile doğrudan çalışır:
 ```bash
 python stok_takip.py
 ```
+
+## Nasıl Denenir?
+1. Uygulamayı `python stok_takip.py` komutuyla başlattığınızda ana menü açılır.
+2. **Yeni ürün ekleme (#1):** Menüden `1` yazıp Enter'a basın. Ürün adı, mevcut stok (örneğin `2`) ve kritik eşik (örneğin `5`) bilgilerini girin; ürünün `stoklar.json` dosyasına eklendiği bilgisini göreceksiniz.
+3. **Kritik stokları listeleme (#2):** Menüden `2` yazıp Enter'a basın. Mevcut stoğu kritik eşiğin altında kalan ürünlerin uyarı listesinde görüntülendiğini görebilirsiniz.
+4. Çıkmak için `0` tuşuna basabilirsiniz.
